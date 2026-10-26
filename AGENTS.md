@@ -91,6 +91,7 @@ Voice-Model/
 ├─ models/           # .pth + .index hasil training
 ├─ scripts/          # prepare_dataset, inspect_dataset, molab_push
 ├─ cloud/            # molab_setup.sh, molab_fetch.sh, molab_pipeline.sh, README.md
+├─ docs/             # training-run.md (log run), references.md (sumber & inspirasi)
 ├─ tools/            # jq portable
 ├─ .venv/            # Python lokal (numpy) untuk script dataset
 ├─ .agents/skills/   # marimo-pair

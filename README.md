@@ -27,7 +27,8 @@ tetapi suara masih terasa **agak robot**. Dugaan penyebab: kebersihan sampel
 artefak dari pemotongan otomatis), bukan dari arsitektur atau jumlah epoch.
 Perbaikan yang mungkin di kemudian hari: dataset yang lebih bersih/noise-free,
 pengaturan `index rate` dan `pitch` di sisi inference, atau latih ulang dengan
-epoch lebih banyak sambil membandingkan checkpoint.
+epoch lebih banyak sambil membandingkan checkpoint. Daftar sumber dan urutan
+percobaannya ada di [`docs/references.md`](docs/references.md#kalau-suara-masih-robot).
 
 ## Alur kerja
 
@@ -69,6 +70,7 @@ molab (12 jam / idle 90 menit).
 | `cloud/molab_pipeline.sh` | Pipeline training 7 tahap dengan gate jumlah file |
 | `cloud/README.md` | Runbook satu sesi molab dari awal sampai unduh artefak |
 | `docs/training-run.md` | Catatan run training `myvoice` (angka, log, masalah yang ditemui) |
+| `docs/references.md` | Sumber, referensi, dan inspirasi: RVC, VCClient/VST, RMVPE, panduan dataset, proyek sejenis |
 | `AGENTS.md` | Konvensi kerja, perintah, dan daftar jebakan teknis |
 | `.agents/skills/` | Skill `marimo-pair` (kendali kernel molab dari lokal) |
 
@@ -166,6 +168,25 @@ Daftar lengkap ada di `AGENTS.md`; yang paling mahal waktunya:
   Hugging Face bernama `assets/rmvpe.pt`.
 - **Sandbox molab tidak persisten** (HTTP 410 setelah idle 90 menit); semua
   langkah setup dibuat idempoten supaya sesi baru siap dalam ~1,5 menit.
+
+## Referensi
+
+Daftar lengkap (dengan alasan tiap tautan) ada di [`docs/references.md`](docs/references.md).
+Yang paling sering dipakai:
+
+- [RVC-Project/Retrieval-based-Voice-Conversion-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
+  — repo yang dilatih ulang di sini; lihat `docs/en/training_tips_en.md` dan `docs/en/faiss_tips_en.md`.
+- [Aset pretrained di Hugging Face](https://huggingface.co/lj1995/VoiceConversionWebUI)
+  — HuBERT, RMVPE, `f0G40k`/`f0D40k`.
+- [w-okada/voice-changer (VCClient)](https://github.com/w-okada/voice-changer) dan
+  [tutorial RVC-nya](https://github.com/w-okada/voice-changer/blob/master/tutorials/tutorial_rvc_en_latest.md)
+  — calon untuk Fase 3; sumber arti `CHUNK`, `EXTRA`, `INDEX`, `TUNE`.
+- [RVC Realtime VST](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/tree/main/RVCRealtimeVST)
+  — plugin VST3 resmi yang memuat `.pth` + `.index` langsung, alternatif VCClient.
+- [AI Hub — Dataset & Isolation](https://docs.aihub.gg/rvc/resources/dataset-isolation/)
+  — penyebab artefak robotik dan cara membersihkan dataset.
+- [RMVPE (arXiv 2306.15412)](https://arxiv.org/abs/2306.15412) — ekstraksi pitch yang dipakai model ini.
+- [Seed-VC](https://github.com/Plachtaa/seed-vc) — zero-shot real-time VC (~300 ms), pembanding pendekatan.
 
 ## Privasi dan lisensi
 
