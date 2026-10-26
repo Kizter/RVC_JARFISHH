@@ -104,6 +104,7 @@ Urutan percobaan yang paling murah lebih dulu:
   tidak berlaku untuk model sendiri, tapi tetap baca sebelum distribusi).
 - Seed-VC, so-vits-svc, Applio: lisensi masing-masing; periksa sebelum memakai
   kode atau modelnya secara komersial.
-- Model `myvoice` dilatih dari suara pemiliknya sendiri dan tidak
-  dipublikasikan. Referensi di atas bukan izin untuk mengkloning suara orang
-  lain tanpa persetujuan.
+- Model `myvoice` dilatih dari audio publik konten kreator
+  [@JARFISH](https://www.youtube.com/@JARFISH) dan tidak dipublikasikan; dipakai
+  sendiri sebagai eksperimen. Referensi di atas bukan izin untuk mengkloning
+  suara orang lain tanpa persetujuan, apalagi menyebarkannya.

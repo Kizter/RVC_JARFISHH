@@ -1,11 +1,12 @@
-# RVC_JARFISHH — buat model untuk voice changer real-time
+# RVC_JARFISHH — model RVC v2 untuk voice changer real-time
 
-test model **RVC v2 40k** dari konten kreator https://www.youtube.com/@JARFISH di GPU
-cloud, lalu memakainya sebagai voice changer real-time di PC lokal.
-
+Proyek belajar: melatih model **RVC v2 40k** dari suara konten kreator
+[@JARFISH](https://www.youtube.com/@JARFISH) di GPU cloud, lalu memakainya
+sebagai voice changer real-time di PC lokal.
 
 Repository ini berisi **kode dan dokumentasi** saja. Audio sumber, dataset,
-dan bobot model tidak ikut di-commit (lihat [Isi repo](#isi-repo)).
+dan bobot model tidak ikut di-commit (lihat [Isi repo](#isi-repo)), dan model
+hanya dipakai sendiri, tidak dipublikasikan.
 
 - Status: Fase 0–2 selesai, model `myvoice` sudah jadi dan dipakai.
 - Training: marimo molab, RTX Pro 6000 Blackwell 96 GB.
@@ -21,7 +22,7 @@ dan bobot model tidak ikut di-commit (lihat [Isi repo](#isi-repo)).
 | Training | 300 epoch, batch 8, 12.300 step, ~31 menit di molab |
 | Artefak | `myvoice.pth` 55,2 MB + `myvoice.index` 200,5 MB (FAISS IVF1627, dim 768) |
 
-Penilaian pemilik model setelah uji dengar: **cukup memuaskan dan cocok**,
+Hasil uji dengar saat dipakai: **cukup memuaskan dan cocok**,
 tetapi suara masih terasa **agak robot**. Dugaan penyebab: kebersihan sampel
 (vokal diambil dari campuran audio yang tidak sepenuhnya bersih, plus sedikit
 artefak dari pemotongan otomatis), bukan dari arsitektur atau jumlah epoch.
@@ -192,7 +193,11 @@ Yang paling sering dipakai:
 
 - Token molab hanya lewat environment variable, tidak pernah ditulis ke file
   atau commit; token dirotasi tiap sesi.
-- Audio sumber dan model tidak dipublikasikan. Model ini hanya untuk suara
-  pemiliknya sendiri.
+- Audio sumber dan model tidak dipublikasikan. Rekaman sumber adalah audio
+  publik dari channel [@JARFISH](https://www.youtube.com/@JARFISH); model ini
+  untuk pemakaian pribadi, bukan suara penulis repo, dan tidak untuk
+  menggantikan, mewakili, atau dipakai komersial atas nama orang tersebut.
+- Mengkloning suara orang lain tanpa izin lalu menyebarkannya tidak etis;
+  proyek ini hanya contoh teknis skala pribadi (dataset 35 menit, satu model).
 - RVC dan w-okada/voice-changer punya lisensi masing-masing; periksa sebelum
   mendistribusikan ulang kode atau model turunan.

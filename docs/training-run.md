@@ -100,7 +100,7 @@ ingin membandingkan). Sandbox kembali `410 sandbox terminated` setelah idle
 
 ## Catatan kualitas (uji dengar)
 
-Pemilik model menilai hasilnya **cukup memuaskan dan cocok**, dengan catatan
+Uji dengar saat dipakai menilai hasilnya **cukup memuaskan dan cocok**, dengan catatan
 suara masih **agak robot**. Kandidat penyebab dan langkah berikutnya:
 
 1. **Kebersihan sampel** — vokal berasal dari campuran yang tidak sepenuhnya

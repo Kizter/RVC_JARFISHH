@@ -2,8 +2,9 @@
 
 ## Overview
 
-Melatih model suara sendiri (RVC v2) di marimo molab, lalu memakainya sebagai
-voice changer real-time di PC lokal dengan w-okada/voice-changer.
+Melatih model RVC v2 dari suara konten kreator [@JARFISH](https://www.youtube.com/@JARFISH)
+di marimo molab, lalu memakainya sebagai voice changer real-time di PC lokal
+dengan w-okada/voice-changer. Pemakaian pribadi; model tidak dipublikasikan.
 
 - Training: molab, RTX Pro 6000 Blackwell 96 GB (sesi maks. 12 jam, idle 90 menit).
 - Inference: PC lokal, GTX 1650 4 GB / i5-13400F / 16 GB RAM.
