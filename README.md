@@ -1,7 +1,8 @@
-# RVC_JARFISHH — model suara sendiri untuk voice changer real-time
+# RVC_JARFISHH — buat model untuk voice changer real-time
 
-Proyek pribadi: melatih model **RVC v2 40k** dari rekaman suara sendiri di GPU
+test model **RVC v2 40k** dari konten kreator https://www.youtube.com/@JARFISH di GPU
 cloud, lalu memakainya sebagai voice changer real-time di PC lokal.
+
 
 Repository ini berisi **kode dan dokumentasi** saja. Audio sumber, dataset,
 dan bobot model tidak ikut di-commit (lihat [Isi repo](#isi-repo)).
