@@ -1,0 +1,15 @@
+# Audio sources and derived data (large, reproducible)
+/model/
+/raw/
+/dataset/
+/models/
+/tools/
+
+# Secrets
+.env
+*.token
+
+# Python
+__pycache__/
+*.pyc
+.venv/
